@@ -1,0 +1,96 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="330" rx="90" ry="12" fill="#00000022"/>
+
+  <!-- Tail (animated swish) -->
+  <path d="M 270 260 Q 340 250 330 180 Q 325 150 300 160"
+        stroke="#4a4a4a" stroke-width="18" fill="none" stroke-linecap="round">
+    <animate attributeName="d"
+      values="
+        M 270 260 Q 340 250 330 180 Q 325 150 300 160;
+        M 270 260 Q 350 230 320 160 Q 305 135 285 155;
+        M 270 260 Q 340 250 330 180 Q 325 150 300 160"
+      dur="2.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="270" rx="80" ry="60" fill="#4a4a4a"/>
+
+  <!-- Head group -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 0; 0 -4; 0 0" dur="3s" repeatCount="indefinite"/>
+
+    <!-- Ears -->
+    <polygon points="140,150 160,90 185,145" fill="#4a4a4a"/>
+    <polygon points="215,145 240,90 260,150" fill="#4a4a4a"/>
+    <polygon points="150,140 162,105 178,138" fill="#f7b6a3"/>
+    <polygon points="222,138 238,105 250,140" fill="#f7b6a3"/>
+
+    <!-- Head shape -->
+    <circle cx="200" cy="190" r="70" fill="#4a4a4a"/>
+
+    <!-- Cheeks -->
+    <circle cx="150" cy="205" r="18" fill="#5c5c5c"/>
+    <circle cx="250" cy="205" r="18" fill="#5c5c5c"/>
+
+    <!-- Eyes -->
+    <ellipse cx="175" cy="185" rx="12" ry="16" fill="#2e2e2e"/>
+    <ellipse cx="225" cy="185" rx="12" ry="16" fill="#2e2e2e"/>
+
+    <!-- Eyelids for blink -->
+    <rect x="160" y="170" width="30" height="0" fill="#4a4a4a">
+      <animate attributeName="height"
+        values="0;0;32;0;0" keyTimes="0;0.92;0.96;1;1"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="210" y="170" width="30" height="0" fill="#4a4a4a">
+      <animate attributeName="height"
+        values="0;0;32;0;0" keyTimes="0;0.92;0.96;1;1"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Pupil highlights -->
+    <circle cx="178" cy="180" r="3" fill="white"/>
+    <circle cx="228" cy="180" r="3" fill="white"/>
+
+    <!-- Nose -->
+    <polygon points="200,205 192,215 208,215" fill="#f7b6a3"/>
+
+    <!-- Mouth -->
+    <path d="M 200 215 Q 200 222 190 222 Q 180 222 178 215" stroke="#2e2e2e" stroke-width="2" fill="none"/>
+    <path d="M 200 215 Q 200 222 210 222 Q 220 222 222 215" stroke="#2e2e2e" stroke-width="2" fill="none"/>
+
+    <!-- Whiskers (twitching) -->
+    <g stroke="#2e2e2e" stroke-width="1.5">
+      <line x1="130" y1="195" x2="80" y2="188">
+        <animateTransform attributeName="transform" type="rotate"
+          values="0 130 195; 3 130 195; 0 130 195" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="130" y1="205" x2="78" y2="205">
+        <animateTransform attributeName="transform" type="rotate"
+          values="0 130 205; 3 130 205; 0 130 205" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="130" y1="215" x2="80" y2="222">
+        <animateTransform attributeName="transform" type="rotate"
+          values="0 130 215; 3 130 215; 0 130 215" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="270" y1="195" x2="320" y2="188">
+        <animateTransform attributeName="transform" type="rotate"
+          values="0 270 195; -3 270 195; 0 270 195" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="270" y1="205" x2="322" y2="205">
+        <animateTransform attributeName="transform" type="rotate"
+          values="0 270 205; -3 270 205; 0 270 205" dur="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="270" y1="215" x2="320" y2="222">
+        <animateTransform attributeName="transform" type="rotate"
+          values="0 270 215; -3 270 215; 0 270 215" dur="3s" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>
+
+  <!-- Front paws -->
+  <ellipse cx="170" cy="325" rx="22" ry="15" fill="#4a4a4a"/>
+  <ellipse cx="230" cy="325" rx="22" ry="15" fill="#4a4a4a"/>
+</svg>
